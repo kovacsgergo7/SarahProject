@@ -33,9 +33,23 @@ article{
     padding-top:.5rem
 }
 .highlited-box{
+    max-width: 20rem;
     margin-block: 1rem;
     padding: 1rem;
     background-color: lightblue;
     border-radius: 1rem;
     font-style: italic;
+}
+
+@media(min-width:50rem){
+    .row{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap:2rem;
+    }
+    .right{
+        justify-self: center;
+        justify-content: center;
+        background-color: red;
+    }
 }
