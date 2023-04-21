@@ -1,6 +1,8 @@
 :root{
     --white:hsl(0,0%,100%);
     --black:hsl(0,0%,0%);
+    --secondary-color:hsl(120, 12%, 63%);
+    --hightlight-color:hsl(46, 97%, 74%);
 }
 
 *{
@@ -34,11 +36,21 @@ h1{
     text-align: center;
 }
 .colored-background{
-    background: hsl(120, 12%, 63%);
+    background: var(--secondary-color);
 }
 .bordered-box{
     padding: 1rem;
     border: 1px solid black;
+    border-radius: 1rem;
+}
+.highlited-box{
+    margin-inline: auto;
+    max-width: 20rem;
+    margin-block: 1rem;
+    padding: 1rem;
+    background-color: var(--hightlight-color);
+    border-radius: 1rem;
+    font-style: italic;
 }
 
 nav{
@@ -76,7 +88,7 @@ nav{
 }
 .nav-list a:hover,
 .nav-active{
-    background: lightgrey;
+    background: var(--secondary-color);
 }
 
 header{
@@ -115,15 +127,7 @@ article{
     font-size: .8rem;
     padding-top:.5rem
 }
-.highlited-box{
-    margin-inline: auto;
-    max-width: 20rem;
-    margin-block: 1rem;
-    padding: 1rem;
-    background-color: hsl(0, 0%, 60%);
-    border-radius: 1rem;
-    font-style: italic;
-}
+
 .right{
     padding-block: 1rem;
     text-align: center;
@@ -138,7 +142,6 @@ article{
     padding: 1rem;
     margin-block: 1rem;
     min-height: 10rem;
-    box-shadow: 0 0 3px 1px var(--black);
     border-radius: 1rem;
 }
 
