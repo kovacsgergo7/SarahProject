@@ -1,3 +1,8 @@
+:root{
+    --white:hsl(0,0%,100%);
+    --black:hsl(0,0%,0%);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -17,10 +22,63 @@ img{
     max-width: 60rem;
     margin-inline: auto;
 }
+a{
+    text-decoration: none;
+}
 h1{
-    color: hsl(0, 0%, 100%);
+    color: var(--white);
     font-size: clamp(1.5rem, 8vw, 3rem);
 }
+
+.centered-text{
+    text-align: center;
+}
+.colored-background{
+    background: hsl(120, 12%, 63%);
+}
+.bordered-box{
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+nav{
+    background: var(--white);
+    padding-block:1rem;
+    position: sticky;
+    top:0;
+    box-shadow: 0 0 3px 1px var(--black);
+}
+.nav-items{
+    display: flex;
+    gap:3rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav-list{
+    display: flex;
+    gap:2rem;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.logo{
+    color: var(--black);
+    font-weight:bold;
+    font-size: 1.3rem;
+}
+.nav-list a{
+    padding:1rem;
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size: 1.1rem;
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.nav-list a:hover,
+.nav-active{
+    background: lightgrey;
+}
+
 header{
     padding-block:8rem;
     background: url("img/hero.jpg");
@@ -58,6 +116,7 @@ article{
     padding-top:.5rem
 }
 .highlited-box{
+    margin-inline: auto;
     max-width: 20rem;
     margin-block: 1rem;
     padding: 1rem;
@@ -69,12 +128,32 @@ article{
     padding-block: 1rem;
     text-align: center;
 }
+.row-three{
+    padding-block: 2rem;
+}
+.row-three > div{
+    display: grid;
+    align-items: center;
+    background: var(--white);
+    padding: 1rem;
+    margin-block: 1rem;
+    min-height: 10rem;
+    box-shadow: 0 0 3px 1px var(--black);
+    border-radius: 1rem;
+}
 
 @media(min-width:50rem){
     .row{
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap:4rem;
+    }
+    .row-three{
+        display: grid;
+        align-items: center;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        min-height: 10rem;
     }
     .right{
         align-self: center;
