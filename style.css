@@ -28,7 +28,7 @@ a{
     text-decoration: none;
 }
 h1{
-    color: var(--white);
+    color: white;
     font-size: clamp(1.5rem, 8vw, 3rem);
 }
 li{
@@ -62,7 +62,7 @@ li{
     align-items: end;
 }
 .message-highlight{
-    width: max-content;
+    max-width: max-content;
     text-align: right;
     padding: .5rem 1.2rem;
     margin-block:0.35rem;
@@ -80,11 +80,11 @@ li{
 
 
 nav{
-    background: var(--white);
+    background: white;
     padding-block:1rem;
     position: sticky;
     top:0;
-    box-shadow: 0 0 3px 1px var(--black);
+    box-shadow: 0 0 3px 1px black;
 }
 .nav-items{
     display: flex;
@@ -100,13 +100,13 @@ nav{
     list-style: none;
 }
 .logo{
-    color: var(--black);
+    color: black;
     font-weight:bold;
     font-size: 1.3rem;
 }
 .nav-list a{
     padding:1rem;
-    color: var(--black);
+    color: black;
     text-transform: uppercase;
     font-weight:bold;
     font-size: 1.1rem;
@@ -122,7 +122,6 @@ header{
     background: url("img/hero.jpg");
     background-size:cover;
     background-position: bottom;
-    background-repeat: no-repeat;
 }
 button{
     cursor: pointer;
@@ -158,13 +157,11 @@ article{
     padding-block: 1rem;
     text-align: center;
 }
-.row-three{
-    padding-block: 2rem;
-}
+
 .row-three > div{
     display: grid;
     align-items: center;
-    background: var(--white);
+    background: white;
     padding: 1rem;
     margin-block: 1rem;
     min-height: 10rem;
@@ -173,6 +170,21 @@ article{
 .checklist{
     align-self: center;
     font-size: 1.2rem;
+}
+
+footer{
+    padding-block: 2rem;
+    background: lightgray;
+}
+footer a{
+    color: #000;
+    font-weight: bold;
+}
+
+.social-media{
+    display: grid;
+    gap:1rem;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 @media(min-width:50rem){
